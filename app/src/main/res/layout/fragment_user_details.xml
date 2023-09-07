@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".presentation.MainActivity">
+
+        <TextView
+            android:id="@+id/user_name_text_view"
+            style="@style/Header1TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Aisha Velasquez" />
+
+        <ImageView
+            android:id="@+id/user_eye_color_image_view"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/eye_color_blue"
+            app:layout_constraintStart_toEndOf="@id/user_name_text_view"
+            app:layout_constraintTop_toTopOf="@id/user_name_text_view" />
+
+        <ImageView
+            android:id="@+id/user_favorite_fruit_image_view"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_name_text_view"
+            tools:src="@drawable/apple" />
+
+        <TextView
+            android:id="@+id/user_age_text_view"
+            style="@style/Header2TextView"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_favorite_fruit_image_view"
+
+            tools:text="Age: 37"
+
+            />
+
+        <TextView
+            android:id="@+id/user_register_date_text_view"
+
+            style="@style/Header2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_age_text_view"
+            tools:text="Registered: 09:26 14.02.2016" />
+
+        <TextView
+            android:id="@+id/user_contacts_text_view"
+            style="@style/Header2TextView"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_register_date_text_view"
+           android:text="@string/contacts"
+            />
+
+        <Button
+            android:id="@+id/user_phone_button"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_contacts_text_view"
+            tools:text="+1 (906) 447-2711" />
+
+        <Button
+            android:id="@+id/user_email_button"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            app:circularflow_radiusInDP="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_phone_button"
+            tools:text="aishavelasquez@bugsall.com" />
+
+        <TextView
+            android:id="@+id/user_location_text_view"
+            style="@style/Header2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_email_button"
+            android:text="@string/location" />
+
+        <Button
+            android:id="@+id/user_location_button"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_location_text_view"
+            tools:text="-20.150163 -2.513911" />
+
+        <TextView
+            android:id="@+id/user_friends_text_view"
+            style="@style/Header2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_location_button"
+            android:text="@string/friends" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/user_friend_list_recycler_view"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_friends_text_view" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

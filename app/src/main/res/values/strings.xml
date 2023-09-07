@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Junior_test_userlist</string>
+    <string name="name">Name</string>
+    <string name="email">email</string>
+
+    <string name="user_age_string">Age: %d</string>
+    <string name="user_registered_string">Registered: %s</string>
+    user_coordinates_string
+    <string name="user_coordinates_string">%f %f</string>
+
+    <string name="user_is_off">user is offline</string>
+    <string name="contacts">Contacts</string>
+    <string name="location">Location</string>
+    <string name="friends">Friends</string>
+</resources>
