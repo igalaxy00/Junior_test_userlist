@@ -1,4 +1,4 @@
-Junior_task_users
+Junior_task_users IN PROGRESS
 ========================
 Task:
 ---------------------
@@ -25,4 +25,4 @@ Screens:
   * friends list is similar to "User list"
   * back button pressed provides transitions through the entire hierarchy
 
-IN PROGRESS
+
