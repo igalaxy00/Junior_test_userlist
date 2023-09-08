@@ -26,3 +26,5 @@ Screens:
   * back button pressed provides transitions through the entire hierarchy
 
 
+![](/img/1.JPG)
+![](/img/2.JPG)
