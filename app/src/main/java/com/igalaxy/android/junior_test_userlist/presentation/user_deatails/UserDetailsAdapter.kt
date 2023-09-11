@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.igalaxy.android.junior_test_userlist.R
 import com.igalaxy.android.junior_test_userlist.databinding.UserListItemBinding
-import com.igalaxy.android.junior_test_userlist.domain.domain.User
+import com.igalaxy.android.junior_test_userlist.domain.model.domain.User
 import com.igalaxy.android.junior_test_userlist.presentation.user_list.UserListFragmentDirections
 import com.igalaxy.android.junior_test_userlist.presentation.user_list.UserViewHolder
 

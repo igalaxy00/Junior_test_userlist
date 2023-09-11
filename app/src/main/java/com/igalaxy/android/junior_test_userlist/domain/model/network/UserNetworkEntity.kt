@@ -8,7 +8,6 @@ data class UserNetworkEntity(
     val guid: String = "",
     val isActive: Boolean = true,
     val balance: String,
-
     val age: Int = 20,
     val eyeColor: String = "",
     val name: String = "Name",

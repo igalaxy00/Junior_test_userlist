@@ -1,8 +1,8 @@
 package com.igalaxy.android.junior_test_userlist.domain.model.network
 
-import com.igalaxy.android.junior_test_userlist.domain.domain.EyeColor
-import com.igalaxy.android.junior_test_userlist.domain.domain.Fruit
-import com.igalaxy.android.junior_test_userlist.domain.domain.User
+import com.igalaxy.android.junior_test_userlist.domain.model.domain.EyeColor
+import com.igalaxy.android.junior_test_userlist.domain.model.domain.Fruit
+import com.igalaxy.android.junior_test_userlist.domain.model.domain.User
 import com.igalaxy.android.junior_test_userlist.util.EntityMapper
 import javax.inject.Inject
 

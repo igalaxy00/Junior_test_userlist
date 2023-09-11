@@ -11,7 +11,7 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.igalaxy.android.junior_test_userlist.R
 import com.igalaxy.android.junior_test_userlist.databinding.FragmentUserDetailsBinding
-import com.igalaxy.android.junior_test_userlist.domain.domain.User
+import com.igalaxy.android.junior_test_userlist.domain.model.domain.User
 import java.text.SimpleDateFormat
 import java.util.Locale
 import java.util.TimeZone

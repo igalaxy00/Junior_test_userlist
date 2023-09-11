@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.igalaxy.android.junior_test_userlist.domain.domain.User
+import com.igalaxy.android.junior_test_userlist.domain.model.domain.User
 import com.igalaxy.android.junior_test_userlist.domain.usecase.GetUserUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch

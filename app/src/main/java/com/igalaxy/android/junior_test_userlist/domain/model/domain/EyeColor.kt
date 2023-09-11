@@ -1,4 +1,4 @@
-package com.igalaxy.android.junior_test_userlist.domain.domain
+package com.igalaxy.android.junior_test_userlist.domain.model.domain
 
 import com.igalaxy.android.junior_test_userlist.R
 

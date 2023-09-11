@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.igalaxy.android.junior_test_userlist.R
 import com.igalaxy.android.junior_test_userlist.databinding.UserListItemBinding
-import com.igalaxy.android.junior_test_userlist.domain.domain.User
+import com.igalaxy.android.junior_test_userlist.domain.model.domain.User
 import hilt_aggregated_deps._com_igalaxy_android_junior_test_userlist_UserApplication_GeneratedInjector
 
 //реализует viewholder с ссылкой на корневой элемент  макета

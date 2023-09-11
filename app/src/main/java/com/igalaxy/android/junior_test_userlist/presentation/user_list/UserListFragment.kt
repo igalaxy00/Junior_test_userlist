@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.igalaxy.android.junior_test_userlist.R
 import com.igalaxy.android.junior_test_userlist.databinding.FragmentUserListBinding
-import com.igalaxy.android.junior_test_userlist.domain.domain.User
+import com.igalaxy.android.junior_test_userlist.domain.model.domain.User
 
 class UserListFragment : Fragment(R.layout.fragment_user_list) {
 

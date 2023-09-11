@@ -1,6 +1,6 @@
 package com.igalaxy.android.junior_test_userlist.domain
 
-import com.igalaxy.android.junior_test_userlist.domain.domain.User
+import com.igalaxy.android.junior_test_userlist.domain.model.domain.User
 
 interface UserRepository {
     suspend fun getUserList(): List<User>
