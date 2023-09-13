@@ -1,4 +1,4 @@
-Junior_task_users IN PROGRESS
+Junior_task_users 
 ========================
 Task:
 ---------------------
@@ -25,6 +25,24 @@ Screens:
   * friends list is similar to "User list"
   * back button pressed provides transitions through the entire hierarchy
 
-
+Learned and worked with:
+  ------------------------
+ - Dependecy Injection (Hilt)
+   * @Inject, @AndroidEntryPoint, @HiltViewModel, @Module, @Provides annotations
+ - Kotlin coroutines
+ - Navigation graph
+ - Room
+ - Retrofit
+ - LiveData
+ - ViewBinding
+ - Clean architecture
+ - MVVM pattern
+ - Implicit intents
+  
+  Screenshots
+  -----------------------
 ![](/img/1.JPG)
 ![](/img/2.JPG)
+![](/img/3.JPG)
+![](/img/4.JPG)
+
