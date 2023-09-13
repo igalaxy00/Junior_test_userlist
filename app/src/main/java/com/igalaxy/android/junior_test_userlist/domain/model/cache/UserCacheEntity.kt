@@ -6,27 +6,29 @@ import androidx.room.TypeConverter
 import androidx.room.TypeConverters
 
 import java.util.Date
-
-@Entity
+@Entity(tableName = UserCacheEntity.TableName)
 data class UserCacheEntity(
     @PrimaryKey val id: Int ,
-//    val name: String ,
-//    val email: String,
-//    val isActive: Boolean ,
-//    val age: Int ,
-//    val company: String ,
-//    val phone: String,
-//    val address: String ,
-//    val about: String ,
-//    val eyeColor: String ,
-//    val favoriteFruit: String ,
-//
-//    @field:TypeConverters(UserTypeConverters::class)
-//    val registerDate: Date,
-//
-//    val latitude: Float ,
-//    val longitude: Float
+    val name: String ,
+    val email: String,
+    val isActive: Boolean ,
+    val age: Int ,
+    val company: String ,
+    val phone: String,
+    val address: String ,
+    val about: String ,
+    val eyeColor: String ,
+    val favoriteFruit: String ,
+
+    //@field:TypeConverters(UserTypeConverters::class)
+    val registerDate: Date,
+    val latitude: Float ,
+    val longitude: Float,
 
     //@field:TypeConverters(FriendTypeConverter::class)
-    //val friends: List<Int>
-)
+    val friends: List<Int>
+){
+    companion object{
+        const val TableName = "UserCaches"
+    }
+}

@@ -2,6 +2,7 @@ package com.igalaxy.android.junior_test_userlist.data
 
 import android.util.Log
 import com.igalaxy.android.junior_test_userlist.data.api.UserApi
+import com.igalaxy.android.junior_test_userlist.data.database.UserDao
 import com.igalaxy.android.junior_test_userlist.domain.UserRepository
 import com.igalaxy.android.junior_test_userlist.domain.model.domain.EyeColor
 import com.igalaxy.android.junior_test_userlist.domain.model.domain.Fruit
@@ -17,7 +18,7 @@ private const val TAG = "REPO"
 class UserRepositoryImpl @Inject constructor(
     private val userNetworkMapper: UserNetworkMapper,
     private val userApi: UserApi,
-    //private val userDao: UserDao,
+    private val userDao: UserDao,
     private val userCacheMapper: UserCacheMapper,
 ) : UserRepository {
     private fun intToBoolean(value: Int): Boolean {
@@ -75,22 +76,22 @@ class UserRepositoryImpl @Inject constructor(
 
 
     override suspend fun getUserList(): List<User> {
-       /* Log.d("networkk","start")
-        //получем из ДАО юзеров. Потом маппером приводим к обычному юзеру
-        var userList = userCacheMapper.mapFromEntityList(userDao.getUserList())
+//       Log.d("networkk","start")
+//        //получем из ДАО юзеров. Потом маппером приводим к обычному юзеру
+//        var userList = userCacheMapper.mapFromEntityList(userDao.getUserList())
+//
+//        Log.d(TAG, "Got ${userList.size} users CACHED FROM DB")
+//        //если не получили список из ДАО
+//        if (userList.isEmpty()) {
+//            //плдучаем юзеров через fetch . Потом если там не пусто то с помощью маппера делаем из entity юзера и получаем лист
+//            userList =
+//                userApi.fetchUsers()?.let { userNetworkMapper.mapFromEntityList(it) } ?: listOf()
+//            //после запроса кэшируем всё
+//            cacheUserList(userList)
+//            Log.i(TAG, "DOWNLOADED AND CACHED USERS")
+//        }
+//        return userList
 
-        Log.d(TAG, "Got ${userList.size} users CACHED FROM DB")
-        //если не получили список из ДАО
-        if (userList.isEmpty()) {
-            //плдучаем юзеров через fetch . Потом если там не пусто то с помощью маппера делаем из entity юзера и получаем лист
-            userList =
-                userApi.fetchUsers()?.let { userNetworkMapper.mapFromEntityList(it) } ?: listOf()
-            //после запроса кэшируем всё
-            cacheUserList(userList)
-            Log.i(TAG, "DOWNLOADED AND CACHED USERS")
-        }
-        return userList
-*/
         return mockUserList()
 
     }
