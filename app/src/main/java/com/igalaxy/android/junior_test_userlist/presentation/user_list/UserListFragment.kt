@@ -38,7 +38,7 @@ class UserListFragment : Fragment(R.layout.fragment_user_list) {
         binding.userListRecyclerView.adapter = userListRecyclerViewAdapter
 
         binding.userListSwipeRefreshLayout.setOnRefreshListener {
-
+            refreshUi()
             binding.userListSwipeRefreshLayout.isRefreshing = false
 
         }
@@ -69,7 +69,7 @@ class UserListFragment : Fragment(R.layout.fragment_user_list) {
         Log.i("UI", "UI was updated")
     }
 
-    fun RefreshUi(){
-
+    fun refreshUi() {
+        userListViewModel.getUserList()
     }
 }

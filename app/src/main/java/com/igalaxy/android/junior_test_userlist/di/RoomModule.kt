@@ -1,4 +1,5 @@
 package com.igalaxy.android.junior_test_userlist.di
+
 import android.content.Context
 import androidx.room.Room
 import com.igalaxy.android.junior_test_userlist.data.database.UserDao
@@ -24,8 +25,8 @@ object RoomModule {
             context,
             UserDatabase::class.java,
             DATABASE_NAME
-        )
-            //.addMigrations(migration_1_2)
+        )//.fallbackToDestructiveMigration()
+            //.addMigrations()
             .build()
     }
 

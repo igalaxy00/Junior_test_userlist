@@ -1,9 +1,12 @@
 package com.igalaxy.android.junior_test_userlist.presentation.user_deatails
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -64,9 +67,11 @@ class UserDetailsFragment : Fragment() {
 
 
         val currentUserFriendsLiveData = currentUserLiveDataPair.second
+
         currentUserFriendsLiveData.observe(viewLifecycleOwner) { friendsList ->
             binding.userFriendListRecyclerView.adapter = UserFriendsAdapter(friendsList)
         }
+
     }
 
     fun updateUI(currentUser: User) {
@@ -90,15 +95,31 @@ class UserDetailsFragment : Fragment() {
 
     }
 
+    private fun startPhoneIntent(phoneButton: Button): Intent {
+        val phoneUri: Uri = Uri.parse("tel:" + phoneButton.text)
+        return Intent(Intent.ACTION_DIAL, phoneUri)
+    }
+
+    private fun startEmailIntent(emailButton: Button): Intent {
+        val emailUri: Uri = Uri.parse("mailto:" + emailButton.text)
+        val intent = Intent(Intent.ACTION_SENDTO, emailUri)
+        return intent
+    }
+
+    private fun startGeoIntent(geoButton: Button): Intent {
+        val mapUri = Uri.parse("geo:${geoButton.text}")
+        return Intent(Intent.ACTION_VIEW, mapUri)
+    }
+
     fun listeners() {
         binding.userEmailButton.setOnClickListener {
-
+            startActivity(startEmailIntent(it as Button))
         }
         binding.userPhoneButton.setOnClickListener {
-
+            startActivity(startPhoneIntent(it as Button))
         }
         binding.userLocationButton.setOnClickListener {
-
+            startActivity(startGeoIntent(it as Button))
         }
 
     }

@@ -1,7 +1,7 @@
 package com.igalaxy.android.junior_test_userlist.presentation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import com.igalaxy.android.junior_test_userlist.R
 import dagger.hilt.android.AndroidEntryPoint
@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
     override fun onSupportNavigateUp(): Boolean {
         navHostFragmentManager.navController.navigateUp()
         return super.onSupportNavigateUp()

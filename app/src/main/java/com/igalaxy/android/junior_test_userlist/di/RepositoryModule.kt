@@ -25,6 +25,6 @@ object RepositoryModule {
         userNetworkMapper: UserNetworkMapper
 
     ): UserRepository {
-        return UserRepositoryImpl( userNetworkMapper, userApi,userDao,userCacheMapper)
+        return UserRepositoryImpl(userNetworkMapper, userApi, userDao, userCacheMapper)
     }
 }

@@ -9,7 +9,6 @@ import com.google.android.material.snackbar.Snackbar
 import com.igalaxy.android.junior_test_userlist.R
 import com.igalaxy.android.junior_test_userlist.databinding.UserListItemBinding
 import com.igalaxy.android.junior_test_userlist.domain.model.domain.User
-import hilt_aggregated_deps._com_igalaxy_android_junior_test_userlist_UserApplication_GeneratedInjector
 
 //реализует viewholder с ссылкой на корневой элемент  макета
 class UserViewHolder(private val binding: UserListItemBinding) :
@@ -37,12 +36,13 @@ class UserViewHolder(private val binding: UserListItemBinding) :
     }
 
     override fun onClick(p0: View) {
-        if(user.isActive){
+        if (user.isActive) {
             val userId = user.id
-            val action =UserListFragmentDirections.actionUserListFragmentToUserDetailsFragment(userId)
+            val action =
+                UserListFragmentDirections.actionUserListFragmentToUserDetailsFragment(userId)
             p0.findNavController().navigate(action)
 
-        }else {
+        } else {
             val snackbar = Snackbar.make(p0, R.string.user_is_off, Snackbar.LENGTH_SHORT)
             //snackbar.view.setBackgroundColor(R.color.md_theme_dark_background)
             snackbar.show()

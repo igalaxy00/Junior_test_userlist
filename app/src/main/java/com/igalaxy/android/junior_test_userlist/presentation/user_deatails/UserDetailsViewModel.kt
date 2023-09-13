@@ -1,5 +1,6 @@
 package com.igalaxy.android.junior_test_userlist.presentation.user_deatails
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -23,12 +24,13 @@ class UserDetailsViewModel
             val currentUser = getUserUseCase.execute(id)
             userLiveData.value = currentUser
             //получаем список id друзей
+            Log.d("REPO1", currentUser?.friends.toString())
             currentUser?.friends?.forEach { friendId ->
                 //по id друзей добавляем самих user в список
                 getUserUseCase.execute(friendId)?.let { userFriendsList.add(it) }
             }
-            userFriendsListLiveData.value = userFriendsList
 
+            userFriendsListLiveData.value = userFriendsList
         }
         return Pair(userLiveData, userFriendsListLiveData)
 

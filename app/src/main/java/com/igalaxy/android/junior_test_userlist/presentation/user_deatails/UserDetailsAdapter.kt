@@ -9,17 +9,13 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.igalaxy.android.junior_test_userlist.R
-import com.igalaxy.android.junior_test_userlist.databinding.UserListItemBinding
 import com.igalaxy.android.junior_test_userlist.domain.model.domain.User
-import com.igalaxy.android.junior_test_userlist.presentation.user_list.UserListFragmentDirections
-import com.igalaxy.android.junior_test_userlist.presentation.user_list.UserViewHolder
 
 class UserFriendsViewHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickListener {
     private lateinit var user: User
     private val userNameTextView: TextView = view.findViewById(R.id.user_name_button)
     private val userEmailTextView: TextView = view.findViewById(R.id.user_email_button)
     private val isActive: ImageView = view.findViewById(R.id.user_is_active_image_view)
-
 
 
     init {

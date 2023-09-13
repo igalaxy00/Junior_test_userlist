@@ -5,7 +5,6 @@ import com.igalaxy.android.junior_test_userlist.domain.model.domain.Fruit
 import com.igalaxy.android.junior_test_userlist.domain.model.domain.User
 import com.igalaxy.android.junior_test_userlist.util.EntityMapper
 import javax.inject.Inject
-import java.util.Date
 
 class UserCacheMapper
 @Inject constructor() : EntityMapper<UserCacheEntity, User> {
@@ -27,10 +26,10 @@ class UserCacheMapper
             about = entity.about,
             eyeColor = eyeColor,
             favoriteFruit = favoriteFruit,
-            registerDate = Date(1488),
+            registerDate = entity.registerDate,
             latitude = entity.latitude,
             longitude = entity.longitude,
-            friends = listOf()
+            friends = entity.friends
         )
     }
 

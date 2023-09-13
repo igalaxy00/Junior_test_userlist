@@ -23,4 +23,4 @@ data class UserNetworkEntity(
     val tags: List<String>,
     val friends: List<Friend>,
     val favoriteFruit: String = "",
-    )
+)

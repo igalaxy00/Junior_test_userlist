@@ -6,7 +6,7 @@ import com.igalaxy.android.junior_test_userlist.domain.model.domain.User
 import com.igalaxy.android.junior_test_userlist.util.EntityMapper
 import javax.inject.Inject
 
-class UserNetworkMapper @Inject constructor(): EntityMapper<UserNetworkEntity, User> {
+class UserNetworkMapper @Inject constructor() : EntityMapper<UserNetworkEntity, User> {
 
     override fun mapFromEntity(entity: UserNetworkEntity): User {
 
@@ -32,36 +32,36 @@ class UserNetworkMapper @Inject constructor(): EntityMapper<UserNetworkEntity, U
         )
     }
 
-     override fun mapToEntity(model: User): UserNetworkEntity {
+    override fun mapToEntity(model: User): UserNetworkEntity {
 
-         val eyeColor = EyeColor.convertToString(model.eyeColor)
+        val eyeColor = EyeColor.convertToString(model.eyeColor)
 
-         val favoriteFruit = Fruit.convertToString(model.favoriteFruit)
+        val favoriteFruit = Fruit.convertToString(model.favoriteFruit)
 
-         val friends: List<Friend> = model.friends.map {
-             Friend(it)
-         }
+        val friends: List<Friend> = model.friends.map {
+            Friend(it)
+        }
 
-         return UserNetworkEntity(
-             id = model.id,
-             name = model.name,
-             email = model.email,
-             isActive = model.isActive,
-             age = model.age,
-             company = model.company,
-             phone = model.phone,
-             address = model.address,
-             about = model.about,
-             eyeColor = eyeColor,
-             favoriteFruit = favoriteFruit,
-             registered = model.registerDate,
-             latitude = model.latitude,
-             longitude = model.longitude,
-             friends = friends,
-             balance = "",
-             tags = listOf()
-         )
-     }
+        return UserNetworkEntity(
+            id = model.id,
+            name = model.name,
+            email = model.email,
+            isActive = model.isActive,
+            age = model.age,
+            company = model.company,
+            phone = model.phone,
+            address = model.address,
+            about = model.about,
+            eyeColor = eyeColor,
+            favoriteFruit = favoriteFruit,
+            registered = model.registerDate,
+            latitude = model.latitude,
+            longitude = model.longitude,
+            friends = friends,
+            balance = "",
+            tags = listOf()
+        )
+    }
 
     //получаем список юзеров из инета
     fun mapFromEntityList(entities: List<UserNetworkEntity>): List<User> {

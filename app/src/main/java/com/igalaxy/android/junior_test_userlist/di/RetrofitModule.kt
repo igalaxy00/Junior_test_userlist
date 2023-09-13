@@ -34,7 +34,7 @@ object RetrofitModule {
     fun provideClient(): OkHttpClient {
         val logging = HttpLoggingInterceptor()
         logging.level = HttpLoggingInterceptor.Level.BODY
-            //.addInterceptor(logging)
+        //.addInterceptor(logging)
         return OkHttpClient.Builder().build()
     }
 
@@ -44,7 +44,7 @@ object RetrofitModule {
     fun provideRetrofit(gson: Gson, client: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .baseUrl("https://firebasestorage.googleapis.com/")
-             .addConverterFactory(GsonConverterFactory.create(gson))
+            .addConverterFactory(GsonConverterFactory.create(gson))
             .client(client)
             .build()
     }
